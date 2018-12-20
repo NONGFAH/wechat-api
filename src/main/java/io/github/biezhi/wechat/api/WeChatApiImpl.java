@@ -359,7 +359,7 @@ public class WeChatApiImpl implements WeChatApi {
     }
 
     /**
-     * 开启一个县城接收监听
+     * 开启一个线程接收监听
      */
     private void startRevive() {
         bot.setRunning(true);
@@ -474,7 +474,7 @@ public class WeChatApiImpl implements WeChatApi {
             List<Account> memberList = WeChatUtils.fromJson(WeChatUtils.toJson(jsonObject.getAsJsonArray("MemberList")), new TypeToken<List<Account>>() {});
 
             for (Account account : memberList) {
-                if (null == account.getUserName()) {
+                if (null != account.getUserName()) {
                     accountMap.put(account.getUserName(), account);
                 }
             }

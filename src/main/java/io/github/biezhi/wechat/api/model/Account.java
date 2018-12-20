@@ -59,7 +59,7 @@ public class Account implements Serializable {
     private String remarkPYQuanPin;
 
     @SerializedName("HideInputBarFlag")
-    private Integer iideInputBarFlag;
+    private Integer hideInputBarFlag;
 
     @SerializedName("StarFriend")
     private Integer starFriend;
